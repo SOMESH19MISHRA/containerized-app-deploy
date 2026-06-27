@@ -49,3 +49,4 @@ docker run -p 5000:5000 someshmishra/containerized-app-deploy:latest
 ## Docker Hub
 
 Image: [someshmishra/containerized-app-deploy](https://hub.docker.com/r/someshmishra/containerized-app-deploy)
+# CI/CD pipeline added
