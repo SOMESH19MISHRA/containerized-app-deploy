@@ -49,4 +49,22 @@ docker run -p 5000:5000 someshmishra/containerized-app-deploy:latest
 ## Docker Hub
 
 Image: [someshmishra/containerized-app-deploy](https://hub.docker.com/r/someshmishra/containerized-app-deploy)
-# CI/CD pipeline added
+
+## CI/CD Pipeline
+
+This project includes a GitHub Actions workflow that automatically builds 
+and pushes the Docker image to Docker Hub on every push to the main branch.
+
+### How it works
+1. Code is pushed to the `main` branch
+2. GitHub Actions spins up an Ubuntu runner
+3. Checks out the code
+4. Logs into Docker Hub using GitHub Secrets
+5. Builds the Docker image
+6. Pushes it to Docker Hub automatically
+
+### Secrets required
+- `DOCKER_USERNAME` — your Docker Hub username
+- `DOCKER_TOKEN` — your Docker Hub personal access token
+
+Workflow file: `.github/workflows/docker-build-push.yml`
