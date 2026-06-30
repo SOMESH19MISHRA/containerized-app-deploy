@@ -68,3 +68,19 @@ and pushes the Docker image to Docker Hub on every push to the main branch.
 - `DOCKER_TOKEN` — your Docker Hub personal access token
 
 Workflow file: `.github/workflows/docker-build-push.yml`
+
+## Project 3: AWS Live Deploy
+
+Deployed the containerized Flask app to a live AWS EC2 instance 
+with CloudWatch monitoring.
+
+- Launched EC2 t2.micro (Ubuntu 22.04)
+- Installed Docker on the instance
+- Pulled image from Docker Hub
+- Ran container on port 5000, accessible via public IP
+- Configured CloudWatch CPU alarm (triggers above 80%)
+
+### Challenges
+- AWS free tier expired — calculated cost (~₹5) and terminated immediately after
+- Accidentally committed .pem key file — removed with git rm, added to .gitignore
+- Divergent branches on push — resolved with git pull --rebase
