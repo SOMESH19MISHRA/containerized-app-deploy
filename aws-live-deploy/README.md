@@ -23,10 +23,9 @@ docker pull someshmishra/containerized-app-deploy:latest
 docker run -d -p 5000:5000 someshmishra/containerized-app-deploy:latest
 ```
 
-## Challenges
-- AWS free tier had expired on 2-year-old account. 
-  Calculated actual cost (~₹5 for a few hours) and terminated 
-  instance immediately after completing the project.
+### Challenges
+- Accidentally committed .pem key file — removed with git rm, added to .gitignore
+- Divergent branches on push — resolved with git pull --rebase
 
 ## Screenshots
 - App running at http://3.140.201.178:5000
