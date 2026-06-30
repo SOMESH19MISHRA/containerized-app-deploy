@@ -81,6 +81,5 @@ with CloudWatch monitoring.
 - Configured CloudWatch CPU alarm (triggers above 80%)
 
 ### Challenges
-- AWS free tier expired — calculated cost (~₹5) and terminated immediately after
 - Accidentally committed .pem key file — removed with git rm, added to .gitignore
 - Divergent branches on push — resolved with git pull --rebase
